@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cced9d; 
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .t1, .t2 {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .t1 th, .t1 td, .t2 td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .t1 th ,.t1 td{
+            background-color: #f2f2f2;
+        }
+
+        .t2 input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .year-input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 350px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form action="process.php" method="post">
+            <table class="t1">
+                <tr>
+                   <th> Registration No: <input type="text" name="reg" id="reg"> </th>
+                   <th>Name: <input type="text" name="name" id="name"></th> 
+                </tr>
+                <tr>
+                    <td>Year: <input type="text" name="year" id="year"></td>
+                    <td>Branch: <input type="text" name="branch" id="branch"></td>
+                </tr>
+            </table>
+            <table class="t2">
+                <tr>
+                    <td>
+                        <h1>Event List</h1>   
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="events[]" id="" value="cricket">cricket    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="events[]" id="" value="kabbadi">Kabaddi    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="events[]" id="" value="hockey">Hockey    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="events[]" id="" value="basketball">BasketBall    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="events[]" id="" value="dance">Dance    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="events[]" id="" value="music">Music    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="events[]" id="" value="fineart">Fine Art    
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
